@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
-const { async } = require('regenerator-runtime');
+
 
 const resolvers = {
   Query: {
@@ -20,7 +20,7 @@ const resolvers = {
       const user = await User.create({ name, email, password });
       const token = signToken(user);
 
-      return { token, profile };
+      return { token, user };
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
