@@ -1,5 +1,5 @@
 # Book Search
-![Search](screenshot.jpg)
+![Search](screenshot.JPG)
 
   ## Description
   This is a Book Search app allowing for the profile creation and saving/deleting books viewed.  This was designed refactoring an app from using routes and and traditional api calls and updating it to one using queries and mutations in MongoDB and GraphQL.
